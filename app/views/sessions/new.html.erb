@@ -1,0 +1,22 @@
+<%= provide(:title, 'Log in') %>
+
+<div class="bg-light mt-5">
+    <div class="form-group p-5">
+        <h3>Log in</h3>
+        
+        <!--users/newのときのようなuserオブジェクトが用意できないときは以下のようにする-->
+        <!--「:session」ってsessionコントローラのことかな-->
+        <%= form_for(:session , url: login_path) do |f| %>
+            
+            <%= f.label :email, "Email" %>
+            <%= f.email_field :email, class: 'form-control mb-2' %>
+            
+            <%= f.label :password, "Your Password" %>
+            <%= f.password_field :password, class: 'form-control mb-2' %>
+            
+            <%= f.submit "Log in", class: "btn btn-primary mt-4" %>
+        <% end %>
+        
+        <p>Signup page : <%= link_to "Create New Account", signup_path %></p>
+    </div>
+</div>
