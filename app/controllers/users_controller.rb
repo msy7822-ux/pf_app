@@ -12,6 +12,7 @@ class UsersController < ApplicationController
     
     if @user.save
       # 保存が成功したときの処理をここに記述
+      redirect_to user_url(@user)
     else 
       render 'new'
     end 

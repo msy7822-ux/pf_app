@@ -5,6 +5,9 @@
     <div class="form-group p-5">
         <h3>Signup</h3>
         <%= form_for @user do |f| %>
+        
+            <%= render 'shared/error_messages' %>
+        
             <%= f.label :name, "User Name" %>
             <%= f.text_field :name, class: 'form-control mb-2' %>
             
