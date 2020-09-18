@@ -1,39 +1,77 @@
 <%= provide(:title, 'About') %>
 
-<h2 class="text-center mt-3">「Circlindex」というWEBサービスについて</h2>
+<h2 class="text-center mt-5">「Circlindex」というWEBサービスについて</h2>
 
+<div class="accordion mt-3" id="accordionExample">
+    
+　<!--想定するアプリの使用者-->
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          想定したこのアプリを使用する人物
+        </button>
+      </h5>
+    </div>
 
-<div class="card mt-5">
-    <h3 class="card-header">対象とする人物</h3>
-    <p class="card-body">このWEBサービスは、2020年4月から晴れて大学生となった方を対象に作成したWEBサービスです。</p>
-</div>
-
-<div class="card mt-5">
-    <h3 class="card-header">このWEBサービスの概要</h3>
-    <p class="card-body">
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        このWEBサービスは、2020年4月から晴れて大学生となった方を対象に作成したWEBサービスです。
+      </div>
+    </div>
+  </div>
+  
+  <!--サービス概要-->
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          このWEBサービスの概要
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
         様々なサークルに参加している学生がサークルの様子（画像）やサークル名、活動内容、サークル公式のSNSリンクなどを投稿し、
-        その投稿に対して新入生は興味が湧いたらそのサークルのSNSリンクに飛んだり「いいね」のような機能で、サークルに所属している投稿者はどんな新入生が自分のサークに興味を持ってくれているか知ることができる。
+        その投稿に対して新入生は興味が湧いたらそのサークルのSNSリンクに飛んだり「いいね」のような機能で、サークルに所属している投稿者はどんな新入生が自分のサークルに興味を持ってくれているか知ることができます。
         要するに、今までリアルでやっていたサークル紹介を完全オンラインで再現したWEBサービスになっています。
-    </p>
-</div>
-
-
-
-<div class="card mt-5">
-    <h3 class="card-header">このWEBサービスを作成するに至った背景</h3>
-    <p class="card-body">
+      </div>
+    </div>
+  </div>
+  
+  <!--このWEBサービスを作成するに至った背景-->
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          このWEBサービスを作成するのに至った背景
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
         2020年初頭から、隣国で発生した新型のウィルス感染症の蔓延の影響により大学に入学早々、学生は学校登校することができなくなりました。
         特に大学生（新入生）というと、遠くの県から遥々やってきて一人暮らしを始めることになったという方も少なくないでしょう。
         そんなワクワクしながらも少し心細い新入生の大学生にとって入学早々学校に行けないというのはとてつもない苦しみがあったと思います。
         心細いことに加えて新しい友達を作ったり、サークルや部活などの課外活動に積極的に参加して新しい人間関係を構築することができず憂鬱な毎日を過ごされていたと思います。
         自分らのような2年生以上の学生はある程度のn人間関係があるのでなかなか新入生の気持ちを理解するのは簡単ではないと思います。
         そんな2020年4月入学の新入生に何かしら自分ができることはないだろうかと考えた結果、このサービスを作ることにしました。
-    </p>
-</div>
-
-<div class="card mt-5 mb-5">
-    <h3 class="card-header">このWEBサービスの作成に用いた主な機能</h3>
-    <p class="card-body">
+      </div>
+    </div>
+  </div>
+  
+  
+    <!--このWEBサービスに実装した主な機能-->
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFourth" aria-expanded="false" aria-controls="collapseFourth">
+          このWEBサービスに実装した主な機能
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFourth" class="collapse" aria-labelledby="headingFourth" data-parent="#accordionExample">
+      <div class="card-body">
         <ul>
             <li>ログイン / ログアウト機能</li>
             <li>ユーザー登録機能</li>
@@ -41,6 +79,10 @@
             <li>画像投稿機能</li>
             <li>いいね機能 etc...</li>
         </ul>
-    </p>
+      </div>
+    </div>
+  </div>
+
 </div>
+
 

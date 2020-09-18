@@ -15,12 +15,14 @@
 //= require turbolinks
 //= require_tree .
 
-// Bootstrapの追加
+//= require jquery3
+//= require popper
+//= require bootstrap
+
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
 
-// jQuery-Railsの追加
 //= require jquery
 //= require jquery_ujs
 

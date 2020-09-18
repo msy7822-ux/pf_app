@@ -1,2 +1,27 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<%= provide(:title, "Signup") %>
+
+<!--すでにcontainerに囲まれている前提-->
+<div class="bg-light mt-5">
+    <div class="form-group p-5">
+        <h3>Signup</h3>
+        <%= form_for @user do |f| %>
+            <%= f.label :name, "User Name" %>
+            <%= f.text_field :name, class: 'form-control mb-2' %>
+            
+            <%= f.label :email, "Email" %>
+            <%= f.email_field :email, class: 'form-control mb-2' %>
+            
+            <%= f.label :univ_name, "University Name" %>
+            <%= f.text_field :univ_name, class: 'form-control mb-2' %>
+            
+            <%= f.label :password, "My Password"  %>
+            <%= f.password_field :password, class: 'form-control mb-2' %>
+            
+            <%= f.label :password_confirmation, "Password Confirmation"  %>
+            <%= f.password_field :password_confirmation, class: 'form-control mb-2' %>
+            
+            <%= f.submit "Create my Account", class: "btn btn-primary mt-4" %>
+        <% end %>
+    </div>
+</div>
+

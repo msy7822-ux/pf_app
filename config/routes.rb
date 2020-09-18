@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # userに関するページのルーティング
   get '/signup', to: 'users#new'
+  resources :users
   
   # 紹介ページへのルーティング（静的ページ）
   get '/home', to: 'profile_pages#home'
