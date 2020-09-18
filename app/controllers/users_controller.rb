@@ -12,9 +12,10 @@ class UsersController < ApplicationController
     
     if @user.save
       # 保存が成功したときの処理をここに記述
+      flash[:success] = "Welcome to the Circlindex Web site"
       redirect_to user_url(@user)
     else 
-      render 'new'
+      render 'users/new'
     end 
   end
   
@@ -24,7 +25,6 @@ class UsersController < ApplicationController
   
   
   private 
-  
   def user_params
     params.require(:user).permit(:name, :email, :univ_name, :password, :password_confirmation)
   end
