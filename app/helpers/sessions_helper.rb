@@ -21,5 +21,11 @@ module SessionsHelper
     def log_in?
         !current_user.nil?
         # 上記のcurrent_userはモジュールのメソッドのこと
-    end 
+    end
+    
+    # 現在のログインユーザーをログアウトする
+    def log_out
+       session.delete(:user_id)
+       @current_user = nil
+    end
 end
