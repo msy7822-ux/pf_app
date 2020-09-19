@@ -4,6 +4,8 @@
             The form contains <%= pluralize(@user.errors.count, "error") %>.
         </div>
         
+        <p class="text-danger">※ 以下のメッセージに沿ってこのまま入力しなおしてください</p>
+        
         <ul>
             <% @user.errors.full_messages.each do |msg| %>
                 <li><%= msg %></li>

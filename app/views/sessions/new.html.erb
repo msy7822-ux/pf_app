@@ -1,6 +1,6 @@
 <%= provide(:title, 'Log in') %>
 
-<div class="bg-light mt-5">
+<div class="bg-light mt-5 rounded">
     <div class="form-group p-5">
         <h3>Log in</h3>
         
@@ -17,6 +17,6 @@
             <%= f.submit "Log in", class: "btn btn-primary mt-4" %>
         <% end %>
         
-        <p>Signup page : <%= link_to "Create New Account", signup_path %></p>
+        <p class="mt-2">Signup page : <%= link_to "Create New Account", signup_path %></p>
     </div>
 </div>

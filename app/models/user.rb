@@ -1,5 +1,6 @@
 class User < ApplicationRecord
     # before_saveというコールバック変数は、オブジェクトが保存される前の段階で実行される
+    # つまり全てのuserアカウントのemailは小文字で統一されてデータが保存される
     before_save { self.email = self.email.downcase }
     
     validates :name, presence: true, length: { maximum: 50 }
