@@ -15,5 +15,5 @@ class User < ApplicationRecord
     # セキュアなパスワードを生成する
     has_secure_password
     # パスワードカラムに関するバリデーション
-    validates :password, length: { minimum: 6 }
+    validates :password, length: { minimum: 6 }, allow_nil: true
 end
