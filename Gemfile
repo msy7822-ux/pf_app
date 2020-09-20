@@ -45,17 +45,6 @@ gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sassc-rails', '>= 2.1.0'
 
-# User image_urlを保存する際に必要になるっぽいやつ
-# gem 'carrierwave'
-
-# gem 'carrierwave'
-# # gem 'rmagick'
-# gem 'mini_magick'
-
-gem 'carrierwave',             '1.2.2'
-gem 'mini_magick',             '4.7.0'
-
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'sqlite3', '~> 1.3.13'
@@ -81,7 +70,6 @@ end
 
 group :production do
   gem 'pg', '0.20.0'
-  gem 'fog', '1.42'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

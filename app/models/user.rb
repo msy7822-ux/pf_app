@@ -15,9 +15,5 @@ class User < ApplicationRecord
     # セキュアなパスワードを生成する
     has_secure_password
     # パスワードカラムに関するバリデーション
-    validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
-    
-    # Userのimage_urlのuploader
-    # mount_uploader :image_url, ImageUploader
-    # mount_uploader :image, ImageUploader
+    validates :password, length: { minimum: 6 }
 end

@@ -11,11 +11,10 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       # ユーザーログイン後にユーザー情報のページにリダイレクトする
       log_in(user) 
-      flash[:success] = "ログインに成功しました"
-      redirect_back_or(user)
+      redirect_to user_url(user)
     else
       # エラーメッセージを表示する
-      flash.now[:danger] = 'メールアドレスまたはパスワードが誤っています'
+      flash.now[:danger] = 'Invalid Email / Password combination.'
       render 'new'
     end 
   end
@@ -23,7 +22,6 @@ class SessionsController < ApplicationController
   # ログアウトを実行するアクション
   def destroy
     log_out
-    flash[:success] = "ログアウトしました"
     redirect_to root_url
   end
 end
