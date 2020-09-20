@@ -28,4 +28,18 @@ module SessionsHelper
        session.delete(:user_id)
        @current_user = nil
     end
+    
+    # フレンドリーフォワーディングの実装
+    
+    # アクセスしようとしたURLを記憶しておくメソッド
+    def session_location
+       session[:forwarding_url] = request.original_url if request.get? == true
+    end
+    
+    # sessionに記憶しておいたURL（もしくはデフォルトのURL）にリダイレクトするメソッド
+    def redirect_back_or(default)
+        redirect_to(session[:forwarding_url] || default)
+        # 以下のコード書いておかないと永遠に保護されたページ飛んでしまう
+        session.delete(:forwarding_url)
+    end 
 end

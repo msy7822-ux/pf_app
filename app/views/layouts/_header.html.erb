@@ -1,4 +1,4 @@
-<header class="navbar  navbar-inverse bg-light">
+<header class="navbar navbar-inverse bg-light">
   <div class="container">
     <%= link_to "Circlindex" , home_path , id: 'logo', class: 'text-secondary'%>
     <ul class="nav navbar-right pt-3 pb-3">
@@ -14,7 +14,7 @@
           <!--ドロップダウンのメニュー-->
           <ul class="dropdown-menu" aria-labelledby="btnOpenMenu">
             <li class="dropdown-item"><%= link_to "Profile", current_user, class: 'text-secondary' %></li>
-            <li class="dropdown-item"><%= link_to "Setting", '#', class: 'text-secondary' %></li>
+            <li class="dropdown-item"><%= link_to "Settings", edit_user_path(current_user), class: 'text-secondary' %></li>
             <!--ログアウトリンク-->
             <li class="dropdown-item"><%= link_to 'Log out', logout_path, method: :delete, class: 'text-secondary' %></li>
           </ul>
