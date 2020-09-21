@@ -30,4 +30,5 @@ class User < ApplicationRecord
        end
     end
     
+    validates :password, length: { minimum: 6 }
 end

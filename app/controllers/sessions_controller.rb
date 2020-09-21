@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
       flash[:success] = 'ログインに成功しました'
       log_in(user) 
       redirect_back_or(user)
+      redirect_to user_url(user)
     else
       # エラーメッセージを表示する
       flash.now[:danger] = 'Invalid Email / Password combination.'

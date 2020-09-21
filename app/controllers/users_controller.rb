@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
+<<<<<<< HEAD
   before_action :logged_in_user, only: [:edit, :update]
   before_action :correct_user, only: [:edit, :update]
+=======
+>>>>>>> parent of 4f19f15... これ一旦消します
   
   
   def new
@@ -21,10 +24,11 @@ class UsersController < ApplicationController
     end 
   end
   
-  def edit 
+  def edit
     @user = User.find(params[:id])
   end 
   
+
   def update
     @user = User.find(params[:id])
     
@@ -41,12 +45,12 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
   
-  
+
   private 
   def user_params
     params.require(:user).permit(:name, :email, :univ_name, :password, :password_confirmation, :image_url)
   end
-  
+
   # before アクション
   def logged_in_user
     if log_in? != true

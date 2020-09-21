@@ -28,7 +28,7 @@ module SessionsHelper
        session.delete(:user_id)
        @current_user = nil
     end
-    
+
     # ログイン前にアクセスしようとしていたページのURL
     def store_location
        session[:forwarding_url] = request.original_url if request.get? 
