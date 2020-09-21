@@ -2,9 +2,6 @@
   <div class="container">
     <%= link_to "Circlindex" , home_path , id: 'logo', class: 'text-secondary'%>
     <ul class="nav navbar-right pt-3 pb-3">
-      <li class="nav-item ml-1"><%= link_to "Home", home_path, class: 'text-secondary' %></li>
-      <li class="nav-item ml-2"><%= link_to "About", about_path, class: 'text-secondary' %></li>
-      
       <!--ログインユーザーの有無によって表示を変更する-->
       <% if log_in? %>
         <li class="nav-item ml-2"><%= link_to "Users", "#", class: 'text-secondary' %></li>
@@ -21,6 +18,8 @@
         </li>
         
       <% else %>
+        <li class="nav-item ml-1"><%= link_to "Home", home_path, class: 'text-secondary' %></li>
+        <li class="nav-item ml-2"><%= link_to "About", about_path, class: 'text-secondary' %></li>
         <li class="nav-item ml-2"><%= link_to "Log in", login_path, class: 'text-secondary' %></li>
       <% end %>
       

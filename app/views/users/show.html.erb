@@ -2,3 +2,5 @@
 
 <%= @user.name %>, <%= @user.email %>
 ,<%= @user.univ_name %>
+
+<%= image_tag @user.image_url.url if @user.image_url? %>

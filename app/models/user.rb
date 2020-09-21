@@ -16,4 +16,18 @@ class User < ApplicationRecord
     has_secure_password
     # パスワードカラムに関するバリデーション
     validates :password, length: { minimum: 6 }, allow_nil: true
+    
+    # アップロードされた画像に関してのバリデーションを設定する
+    mount_uploader :image_url, PictureUploader
+    
+    validate :picture_size
+    
+    private
+    
+    def picture_size
+       if image_url.size > 5.megabytes
+           errors.add(:image_url, "5メガバイトよりも小さいものにしてください")
+       end
+    end
+    
 end

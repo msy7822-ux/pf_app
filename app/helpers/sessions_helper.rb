@@ -29,17 +29,14 @@ module SessionsHelper
        @current_user = nil
     end
     
-    # フレンドリーフォワーディングの実装
-    
-    # アクセスしようとしたURLを記憶しておくメソッド
-    def session_location
-       session[:forwarding_url] = request.original_url if request.get? == true
+    # ログイン前にアクセスしようとしていたページのURL
+    def store_location
+       session[:forwarding_url] = request.original_url if request.get? 
     end
     
-    # sessionに記憶しておいたURL（もしくはデフォルトのURL）にリダイレクトするメソッド
+    # 記憶したURLにログイン後にロールバックしてくれる
     def redirect_back_or(default)
         redirect_to(session[:forwarding_url] || default)
-        # 以下のコード書いておかないと永遠に保護されたページ飛んでしまう
         session.delete(:forwarding_url)
-    end 
+    end
 end
